@@ -2,11 +2,17 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import styled from 'styled-components';
 import secretKeys from './secrets.json';
+import mapStyles from './mapStyles.json';
 
 const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
 `;
+
+const mapOptions = {
+  styles: mapStyles,
+  disableDefaultUI: true
+};
 
 const Map = props => {
   return (
@@ -15,6 +21,7 @@ const Map = props => {
         bootstrapURLKeys={{ key: secretKeys.apiKey }}
         defaultCenter={props.center}
         defaultZoom={props.zoom}
+        options={mapOptions}
       />
     </Wrapper>
   );
