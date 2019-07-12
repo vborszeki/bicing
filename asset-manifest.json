@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/pedalem/static/js/main.c32f46d8.chunk.js",
+    "main.js.map": "/pedalem/static/js/main.c32f46d8.chunk.js.map",
+    "runtime~main.js": "/pedalem/static/js/runtime~main.239b2c4c.js",
+    "runtime~main.js.map": "/pedalem/static/js/runtime~main.239b2c4c.js.map",
+    "static/js/2.16728bb1.chunk.js": "/pedalem/static/js/2.16728bb1.chunk.js",
+    "static/js/2.16728bb1.chunk.js.map": "/pedalem/static/js/2.16728bb1.chunk.js.map",
+    "index.html": "/pedalem/index.html",
+    "precache-manifest.713a21c73da93616019e4a31b9398615.js": "/pedalem/precache-manifest.713a21c73da93616019e4a31b9398615.js",
+    "service-worker.js": "/pedalem/service-worker.js"
+  }
+}
