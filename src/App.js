@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import Map from './Map';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -7,22 +8,9 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
-
 const App = () => (
   <>
-    <Wrapper>
-      <h1>
-        <span role="img" aria-label="bike">
-          🚲
-        </span>
-      </h1>
-    </Wrapper>
+    <Map />
     <GlobalStyle />
   </>
 );
