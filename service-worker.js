@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pedalem/precache-manifest.713a21c73da93616019e4a31b9398615.js"
+  "/pedalem/precache-manifest.971214f706de39f1cdb357660890d0a6.js"
 );
 
 self.addEventListener('message', (event) => {
