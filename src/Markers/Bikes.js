@@ -4,7 +4,7 @@ import Marker from './Marker';
 const Bikes = ({ stationInfo }) => (
   <Marker
     type="bike"
-    size={(stationInfo.mechanicalBikes + stationInfo.ebikes) * 2}
+    size={(stationInfo.mechanicalBikes + stationInfo.ebikes) * 1.5}
   />
 );
 
