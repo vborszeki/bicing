@@ -1,8 +1,8 @@
 {
-  "name": "pedalem",
+  "name": "bicing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vborszeki.github.io/pedalem",
+  "homepage": "https://vborszeki.github.io/bicing",
   "dependencies": {
     "google-map-react": "^1.1.4",
     "react": "^16.8.6",
