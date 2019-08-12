@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/bicing/static/js/main.928d0d26.chunk.js",
-    "main.js.map": "/bicing/static/js/main.928d0d26.chunk.js.map",
+    "main.js": "/bicing/static/js/main.76202f59.chunk.js",
+    "main.js.map": "/bicing/static/js/main.76202f59.chunk.js.map",
     "runtime~main.js": "/bicing/static/js/runtime~main.06210fb1.js",
     "runtime~main.js.map": "/bicing/static/js/runtime~main.06210fb1.js.map",
     "static/js/2.ba4b67ce.chunk.js": "/bicing/static/js/2.ba4b67ce.chunk.js",
     "static/js/2.ba4b67ce.chunk.js.map": "/bicing/static/js/2.ba4b67ce.chunk.js.map",
     "index.html": "/bicing/index.html",
-    "precache-manifest.44b17498a350c4ce44e6883393d58a6c.js": "/bicing/precache-manifest.44b17498a350c4ce44e6883393d58a6c.js",
+    "precache-manifest.296e0b8dbfb0e390e2d168a5dfe48ab5.js": "/bicing/precache-manifest.296e0b8dbfb0e390e2d168a5dfe48ab5.js",
     "service-worker.js": "/bicing/service-worker.js"
   }
 }

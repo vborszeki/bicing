@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd7583d25aa99f98b3e4150705df70ab",
+    "revision": "41f4f33b0b9d6b4b7f471b7072292221",
     "url": "/bicing/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bicing/static/js/2.ba4b67ce.chunk.js"
   },
   {
-    "revision": "80259e5405ca30536cd7",
-    "url": "/bicing/static/js/main.928d0d26.chunk.js"
+    "revision": "4687f27597fef769c588",
+    "url": "/bicing/static/js/main.76202f59.chunk.js"
   },
   {
     "revision": "13b09777bd816d264ca2",
