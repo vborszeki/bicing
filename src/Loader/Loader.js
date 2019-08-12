@@ -7,14 +7,14 @@ const Wrapper = styled(animated.div)`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-size: 50px;
+  font-size: 60px;
 `;
 
 const Loader = () => {
   const style = useSpring({
-    config: { friction: 0, tension: 60 },
-    transform: 'scale(1.1)',
-    from: { transform: 'scale(1)' }
+    config: { friction: 0, tension: 5 },
+    opacity: 0.5,
+    from: { opacity: 1 }
   });
 
   return (

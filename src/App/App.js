@@ -12,12 +12,11 @@ const GlobalStyle = createGlobalStyle`
 
 const App = () => {
   const stations = useStations();
-
-  if (stations.length === 0) return <Loader />;
+  const isLoading = stations.length === 0;
 
   return (
     <>
-      <Map stations={stations} />
+      {isLoading ? <Loader /> : <Map stations={stations} />}
       <GlobalStyle />
     </>
   );
