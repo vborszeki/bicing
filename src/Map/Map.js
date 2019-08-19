@@ -16,7 +16,7 @@ const mapOptions = {
 };
 
 const Map = props => {
-  const { center, zoom, stations } = props;
+  const { center, zoom, stations, onStationClick } = props;
 
   return (
     <Wrapper>
@@ -33,6 +33,7 @@ const Map = props => {
               station={station}
               lat={station.lat}
               lng={station.lon}
+              onStationClick={onStationClick}
             />
           ))}
       </GoogleMapReact>

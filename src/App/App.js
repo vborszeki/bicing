@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Map from '../Map/Map';
 import Loader from '../Loader/Loader';
@@ -11,12 +11,22 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
+  const [selectedStation, setSelectedStation] = useState({});
   const stations = useStations();
   const isLoading = stations.length === 0;
 
+  const handleStationClick = stationInfo => {
+    setSelectedStation(stationInfo);
+    console.log(selectedStation);
+  };
+
   return (
     <>
-      {isLoading ? <Loader /> : <Map stations={stations} />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Map stations={stations} onStationClick={handleStationClick} />
+      )}
       <GlobalStyle />
     </>
   );

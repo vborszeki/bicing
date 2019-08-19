@@ -11,7 +11,8 @@ const Marker = styled.div`
   background-color: ${props =>
     props.type === 'station' ? '#e91e63' : 'transparent'};
   opacity: ${props => (props.type === 'station' ? 0.4 : 1)};
-  z-index: ${props => (props.type === 'station' ? 0 : 1)};
+  z-index: ${props => (props.type === 'station' ? 1 : 0)};
+  cursor: pointer;
 `;
 
 export default Marker;
