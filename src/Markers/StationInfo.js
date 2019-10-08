@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import Station from './Station';
 import Bikes from './Bikes';
 
-const StationInfo = ({ station, onStationClick }) => {
+const StationInfo = ({ station, setSelectedStation }) => {
   const style = useSpring({
     config: { friction: 3, tension: 200 },
     transform: 'scale(1.1)',
@@ -11,8 +11,13 @@ const StationInfo = ({ station, onStationClick }) => {
   });
 
   return (
-    <animated.div style={style} className="kiskutya">
-      <Station stationInfo={station} onStationClick={onStationClick} />
+    <animated.div
+      style={style}
+      onClick={() => {
+        setSelectedStation(station);
+      }}
+    >
+      <Station stationInfo={station} />
       <Bikes stationInfo={station} />
     </animated.div>
   );
