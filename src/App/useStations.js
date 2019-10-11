@@ -29,6 +29,7 @@ const useStations = () => {
         id: station.station_id,
         mechanicalBikes: station.num_bikes_available_types.mechanical,
         ebikes: station.num_bikes_available_types.ebike,
+        availableDocks: station.num_docks_available,
         status: station.status
       }));
 

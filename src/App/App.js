@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import Drawer from '@material-ui/core/Drawer';
-import Typography from '@material-ui/core/Typography';
+import { createGlobalStyle } from 'styled-components';
 import Map from '../Map/Map';
+import Drawer from '@material-ui/core/Drawer';
+import StationInfo from '../StationInfo/StationInfo';
 import Loader from '../Loader/Loader';
 import useStations from './useStations';
 
@@ -10,10 +10,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
   }
-`;
-
-const StationInfoWrapper = styled.div`
-  padding: 20px;
 `;
 
 const App = () => {
@@ -27,31 +23,16 @@ const App = () => {
         <Loader />
       ) : (
         <>
-          <Drawer
-            anchor="bottom"
-            open={Boolean(selectedStation)}
-            onClose={() => setSelectedStation(null)}
-          >
-            {selectedStation && (
-              <StationInfoWrapper>
-                <Typography variant="subtitle1" component="h1" gutterBottom>
-                  {selectedStation.name}
-                </Typography>
-                <Typography component="p">
-                  {`🔧 mechanical: ${selectedStation.mechanicalBikes}`}
-                </Typography>
-                <Typography component="p">
-                  {`⚡️ electric: ${selectedStation.ebikes}`}
-                </Typography>
-                <Typography component="p">
-                  {`🆓 spaces: ${selectedStation.capacity -
-                    selectedStation.mechanicalBikes -
-                    selectedStation.ebikes}`}
-                </Typography>
-              </StationInfoWrapper>
-            )}
-          </Drawer>
           <Map stations={stations} setSelectedStation={setSelectedStation} />
+          {selectedStation && (
+            <Drawer
+              anchor="bottom"
+              open={Boolean(selectedStation)}
+              onClose={() => setSelectedStation(null)}
+            >
+              <StationInfo selectedStation={selectedStation} />
+            </Drawer>
+          )}
         </>
       )}
       <GlobalStyle />
