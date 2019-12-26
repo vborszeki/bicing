@@ -12,7 +12,8 @@ const Wrapper = styled.div`
 
 const mapOptions = {
   styles: mapStyles,
-  disableDefaultUI: true
+  disableDefaultUI: true,
+  clickableIcons: false
 };
 
 const Map = props => {
