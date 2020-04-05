@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Map from '../Map/Map';
-import Drawer from '@material-ui/core/Drawer';
 import StationInfo from '../StationInfo/StationInfo';
 import Loader from '../Loader/Loader';
 import useStations from './useStations';
@@ -9,6 +8,7 @@ import useStations from './useStations';
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
   }
 `;
 
@@ -17,23 +17,16 @@ const App = () => {
   const stations = useStations();
   const isLoading = stations.length === 0;
 
+  if (isLoading) return <Loader />;
+
   return (
     <>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <>
-          <Map stations={stations} setSelectedStation={setSelectedStation} />
-          {selectedStation && (
-            <Drawer
-              anchor="bottom"
-              open={Boolean(selectedStation)}
-              onClose={() => setSelectedStation(null)}
-            >
-              <StationInfo selectedStation={selectedStation} />
-            </Drawer>
-          )}
-        </>
+      <Map stations={stations} setSelectedStation={setSelectedStation} />
+      {selectedStation && (
+        <StationInfo
+          selectedStation={selectedStation}
+          setSelectedStation={setSelectedStation}
+        />
       )}
       <GlobalStyle />
     </>

@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import styled from 'styled-components';
 import secretKeys from '../secrets.json';
 import mapStyles from './mapStyles.json';
-import StationInfo from '../Markers/StationInfo';
+import StationMarker from '../Markers/StationMarker';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -30,7 +30,7 @@ const Map = props => {
       >
         {stations &&
           stations.map((station, i) => (
-            <StationInfo
+            <StationMarker
               key={i}
               station={station}
               lat={station.lat}

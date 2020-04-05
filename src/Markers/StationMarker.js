@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import Station from './Station';
 import Bikes from './Bikes';
 
-const StationInfo = ({ station, setSelectedStation }) => {
+const StationMarker = ({ station, setSelectedStation }) => {
   const style = useSpring({
     config: { friction: 3, tension: 200 },
     transform: 'scale(1.1)',
@@ -23,4 +23,4 @@ const StationInfo = ({ station, setSelectedStation }) => {
   );
 };
 
-export default StationInfo;
+export default StationMarker;
