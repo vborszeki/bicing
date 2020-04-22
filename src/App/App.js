@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Map from '../Map/Map';
-import StationInfo from '../StationInfo/StationInfo';
+import StationInfo from '../StationInfo';
 import LocationButton from '../LocationButton';
 import Loader from '../Loader';
+import TravelModeSelection from '../TravelModeSelection';
 import useStations from './useStations';
 
 const GlobalStyle = createGlobalStyle`
@@ -17,6 +18,7 @@ const App = () => {
   const stations = useStations();
   const [selectedStation, setSelectedStation] = useState(null);
   const [showLocation, setShowLocation] = useState(false);
+  const [showTravelModeSelection, setShowTravelModeSelection] = useState(false);
   const [location, setLocation] = useState({
     lat: 41.39,
     lng: 2.17,
@@ -45,9 +47,16 @@ const App = () => {
         <StationInfo
           selectedStation={selectedStation}
           setSelectedStation={setSelectedStation}
+          setShowTravelModeSelection={setShowTravelModeSelection}
         />
       )}
       <GlobalStyle />
+      {showTravelModeSelection && (
+        <TravelModeSelection
+          selectedStation={selectedStation}
+          setShowTravelModeSelection={setShowTravelModeSelection}
+        />
+      )}
     </>
   );
 };
