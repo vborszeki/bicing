@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/bicing/static/js/main.fda7e765.chunk.js",
-    "main.js.map": "/bicing/static/js/main.fda7e765.chunk.js.map",
+    "main.js": "/bicing/static/js/main.988f7bb4.chunk.js",
+    "main.js.map": "/bicing/static/js/main.988f7bb4.chunk.js.map",
     "runtime~main.js": "/bicing/static/js/runtime~main.06210fb1.js",
     "runtime~main.js.map": "/bicing/static/js/runtime~main.06210fb1.js.map",
-    "static/js/2.7d10b69e.chunk.js": "/bicing/static/js/2.7d10b69e.chunk.js",
-    "static/js/2.7d10b69e.chunk.js.map": "/bicing/static/js/2.7d10b69e.chunk.js.map",
+    "static/js/2.a39c02c0.chunk.js": "/bicing/static/js/2.a39c02c0.chunk.js",
+    "static/js/2.a39c02c0.chunk.js.map": "/bicing/static/js/2.a39c02c0.chunk.js.map",
     "index.html": "/bicing/index.html",
-    "precache-manifest.32e3445fd9a65cd2cd8835bd6f35157a.js": "/bicing/precache-manifest.32e3445fd9a65cd2cd8835bd6f35157a.js",
+    "precache-manifest.9bbd4c0fd8014042bcdf63d6adba5382.js": "/bicing/precache-manifest.9bbd4c0fd8014042bcdf63d6adba5382.js",
     "service-worker.js": "/bicing/service-worker.js"
   }
 }
