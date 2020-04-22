@@ -3,11 +3,11 @@ import { useSpring, animated } from 'react-spring';
 import Station from './Station';
 import Bikes from './Bikes';
 
-const StationMarker = ({ station, setSelectedStation }) => {
+const StationMarker = ({ station, selected, setSelectedStation }) => {
   const style = useSpring({
     config: { friction: 3, tension: 200 },
     transform: 'scale(1.1)',
-    from: { transform: 'scale(1)' }
+    from: { transform: 'scale(1)' },
   });
 
   return (
@@ -17,8 +17,8 @@ const StationMarker = ({ station, setSelectedStation }) => {
         setSelectedStation(station);
       }}
     >
-      <Station stationInfo={station} />
-      <Bikes stationInfo={station} />
+      <Station selected={selected} stationInfo={station} />
+      <Bikes selected={selected} stationInfo={station} />
     </animated.div>
   );
 };

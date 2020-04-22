@@ -22,6 +22,7 @@ const Map = ({
   center,
   zoom,
   stations,
+  selectedStation,
   setSelectedStation,
   showLocation,
   location,
@@ -40,6 +41,7 @@ const Map = ({
             station={station}
             lat={station.lat}
             lng={station.lng}
+            selected={station === selectedStation}
             setSelectedStation={setSelectedStation}
           />
         ))}

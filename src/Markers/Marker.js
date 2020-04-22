@@ -4,6 +4,7 @@ const styles = {
   station: { color: '#fa424c', opacity: 0.4, zIndex: 1 },
   bike: { color: 'transparent', opacity: 1, zIndex: 0 },
   location: { color: '#694ffe', opacity: 1, zIndex: 2 },
+  selected: { color: '#ffbe30' },
 };
 
 const Marker = styled.div`
@@ -13,10 +14,19 @@ const Marker = styled.div`
   left: ${(props) => props.size / -2}px;
   top: ${(props) => props.size / -2}px;
   border: 1px solid
-    ${(props) =>
-      props.type === 'location' ? styles.location.color : styles.station.color};
+    ${(props) => {
+      if (props.selected) {
+        return styles.selected.color;
+      } else if (props.type === 'location') {
+        return styles.location.color;
+      } else {
+        return styles.station.color;
+      }
+    }}
+      
   border-radius: ${(props) => props.size}px;
-  background-color: ${(props) => styles[props.type].color};
+  background-color: ${(props) =>
+    props.selected ? styles.selected.color : styles[props.type].color};
   opacity: ${(props) => styles[props.type].opacity};
   z-index: ${(props) => styles[props.type].zIndex};
   cursor: pointer;

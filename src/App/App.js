@@ -32,6 +32,7 @@ const App = () => {
     <>
       <Map
         stations={stations}
+        selectedStation={selectedStation}
         setSelectedStation={setSelectedStation}
         center={location}
         zoom={zoom}
