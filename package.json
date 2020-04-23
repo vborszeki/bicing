@@ -9,7 +9,8 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "react-spring": "^8.0.27",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "use-places-autocomplete": "^1.2.2"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"

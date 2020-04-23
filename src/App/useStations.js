@@ -33,11 +33,12 @@ const useStations = () => {
         status: station.status,
       }));
 
-      const stationData = stationInfo.map((info) => ({
-        ...stationStatus.find((status) => status.id === info.id),
-        ...info,
-      }));
-      // .filter((station) => station.status === 'IN_SERVICE');
+      const stationData = stationInfo
+        .map((info) => ({
+          ...stationStatus.find((status) => status.id === info.id),
+          ...info,
+        }))
+        .filter((station) => station.status === 'IN_SERVICE');
 
       setStations(stationData);
     } catch (error) {

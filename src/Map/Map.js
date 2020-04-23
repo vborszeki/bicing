@@ -5,6 +5,7 @@ import secretKeys from '../secrets.json';
 import mapStyles from './mapStyles.json';
 import StationMarker from '../Markers/StationMarker';
 import LocationMarker from '../Markers/LocationMarker';
+import SearchResultMarker from '../Markers/SearchResultMarker';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -26,6 +27,7 @@ const Map = ({
   setSelectedStation,
   showLocation,
   location,
+  searchLocation,
 }) => (
   <Wrapper>
     <GoogleMapReact
@@ -46,6 +48,9 @@ const Map = ({
           />
         ))}
       {showLocation && <LocationMarker lat={location.lat} lng={location.lng} />}
+      {searchLocation && (
+        <SearchResultMarker lat={searchLocation.lat} lng={searchLocation.lng} />
+      )}
     </GoogleMapReact>
   </Wrapper>
 );

@@ -4,6 +4,7 @@ const styles = {
   station: { color: '#fa424c', opacity: 0.4, zIndex: 1 },
   bike: { color: 'transparent', opacity: 1, zIndex: 0 },
   location: { color: '#694ffe', opacity: 1, zIndex: 2 },
+  search: { color: '#1fbaf6' },
   selected: { color: '#ffbe30' },
 };
 
@@ -17,6 +18,8 @@ const Marker = styled.div`
     ${(props) => {
       if (props.selected) {
         return styles.selected.color;
+      } else if (props.type === 'search') {
+        return styles.search.color;
       } else if (props.type === 'location') {
         return styles.location.color;
       } else {
