@@ -27,16 +27,16 @@ const ButtonContainer = styled.div`
 
 const Button = styled.a`
   font-size: 60px;
-  margin-right: ${(props) => (props.spacer ? '52px' : '0')};
+  margin-right: ${props => (props.spacer ? '52px' : '0')};
   text-decoration: none;
   cursor: pointer;
 `;
 
 const TravelModeSelection = ({
   selectedStation: { lat, lng },
-  setShowTravelModeSelection,
+  setShowTravelModeSelection
 }) => {
-  const getUrl = (mode) =>
+  const getUrl = mode =>
     `https://www.google.com/maps/dir/?api=1&destination=${lat}%2C${lng}&travelmode=${mode}`;
 
   return (

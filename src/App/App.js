@@ -5,6 +5,7 @@ import StationInfo from '../StationInfo';
 import Search from '../Search';
 import LocationButton from '../LocationButton';
 import SearchButton from '../SearchButton';
+import BikeTypeToggle from '../BikeTypeToggle';
 import Loader from '../Loader';
 import TravelModeSelection from '../TravelModeSelection';
 import useStations from './useStations';
@@ -24,10 +25,11 @@ const App = () => {
   const [showTravelModeSelection, setShowTravelModeSelection] = useState(false);
   const [center, setCenter] = useState({
     lat: 41.39,
-    lng: 2.17,
+    lng: 2.17
   });
   const [location, setLocation] = useState(null);
   const [searchLocation, setSearchLocation] = useState(null);
+  const [showElectricBikes, setShowElectricBikes] = useState(false);
   const [zoom, setZoom] = useState(13.5);
   const isLoading = stations.length === 0;
 
@@ -56,13 +58,18 @@ const App = () => {
         showLocation={showLocation}
         location={location}
         searchLocation={searchLocation}
+        showElectricBikes={showElectricBikes}
       />
+      <BikeTypeToggle
+        showElectricBikes={showElectricBikes}
+        setShowElectricBikes={setShowElectricBikes}
+      />
+      <SearchButton setShowSearch={setShowSearch} />
       <LocationButton
         setLocation={setLocation}
         setZoom={setZoom}
         setShowLocation={setShowLocation}
       />
-      <SearchButton setShowSearch={setShowSearch} />
       {selectedStation && (
         <StationInfo
           selectedStation={selectedStation}

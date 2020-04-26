@@ -6,7 +6,7 @@ const LocationMarker = () => {
   const style = useSpring({
     config: { friction: 0, tension: 5 },
     transform: 'scale(1.1)',
-    from: { transform: 'scale(1)' },
+    from: { transform: 'scale(1)' }
   });
 
   return (

@@ -36,7 +36,7 @@ const DirectionsButton = styled.a`
 const StationInfo = ({
   selectedStation,
   setSelectedStation,
-  setShowTravelModeSelection,
+  setShowTravelModeSelection
 }) => (
   <StationInfoWrapper>
     <Header>

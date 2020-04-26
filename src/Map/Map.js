@@ -16,7 +16,7 @@ const mapOptions = {
   styles: mapStyles,
   disableDefaultUI: true,
   clickableIcons: false,
-  gestureHandling: 'greedy',
+  gestureHandling: 'greedy'
 };
 
 const Map = ({
@@ -28,6 +28,7 @@ const Map = ({
   showLocation,
   location,
   searchLocation,
+  showElectricBikes
 }) => (
   <Wrapper>
     <GoogleMapReact
@@ -45,6 +46,7 @@ const Map = ({
             lng={station.lng}
             selected={station === selectedStation}
             setSelectedStation={setSelectedStation}
+            showElectricBikes={showElectricBikes}
           />
         ))}
       {showLocation && <LocationMarker lat={location.lat} lng={location.lng} />}

@@ -14,7 +14,7 @@ const Loader = () => {
   const style = useSpring({
     config: { friction: 0, tension: 5 },
     opacity: 0.5,
-    from: { opacity: 1 },
+    from: { opacity: 1 }
   });
 
   return (

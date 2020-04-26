@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import usePlacesAutocomplete, {
   getGeocode,
-  getLatLng,
+  getLatLng
 } from 'use-places-autocomplete';
 import Close from './Close';
 
@@ -60,18 +60,18 @@ const Search = ({ setShowSearch, setSearchLocation, setZoom }) => {
   const {
     value,
     suggestions: { status, data },
-    setValue,
+    setValue
   } = usePlacesAutocomplete({
     requestOptions: {
       location: new window.google.maps.LatLng({ lat: 41.39, lng: 2.17 }),
-      radius: 5000,
+      radius: 5000
     },
-    debounce: 300,
+    debounce: 300
   });
   const showAutocomplete = status === 'OK';
   const hasNoSearchResult = status === 'ZERO_RESULTS';
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setValue(e.target.value);
   };
 
@@ -103,13 +103,13 @@ const Search = ({ setShowSearch, setSearchLocation, setZoom }) => {
       />
       {showAutocomplete && (
         <List>
-          {data.map((suggestion) => {
+          {data.map(suggestion => {
             const {
               id,
               structured_formatting: {
                 main_text: name,
-                secondary_text: address,
-              },
+                secondary_text: address
+              }
             } = suggestion;
 
             return (

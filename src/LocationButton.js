@@ -24,7 +24,7 @@ const LocationButton = ({ setLocation, setZoom, setShowLocation }) => {
   const handleClick = async () => {
     try {
       const {
-        coords: { latitude: lat, longitude: lng },
+        coords: { latitude: lat, longitude: lng }
       } = await getLocation();
       const location = { lat, lng };
 

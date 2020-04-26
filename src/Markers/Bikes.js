@@ -1,16 +1,15 @@
 import React from 'react';
 import Marker from './Marker';
 
-const Bikes = ({ stationInfo, selected }) => {
-  const hasBikes = stationInfo.mechanicalBikes + stationInfo.ebikes > 0;
+const Bikes = ({ stationInfo, selected, showElectricBikes }) => {
+  const numberOfBikes = showElectricBikes
+    ? stationInfo.ebikes
+    : stationInfo.mechanicalBikes + stationInfo.ebikes;
+  const hasBikes = numberOfBikes > 0;
 
-  return hasBikes ? (
-    <Marker
-      type="bike"
-      size={(stationInfo.mechanicalBikes + stationInfo.ebikes) * 1.5}
-      selected={selected}
-    />
-  ) : null;
+  if (!hasBikes) return null;
+
+  return <Marker type="bike" size={numberOfBikes * 1.5} selected={selected} />;
 };
 
 export default Bikes;
