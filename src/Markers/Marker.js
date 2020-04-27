@@ -25,9 +25,8 @@ const Marker = styled.div`
       } else {
         return styles.station.color;
       }
-    }}
-      
-  border-radius: ${props => props.size}px;
+    }};
+  border-radius: 50%;
   background-color: ${props =>
     props.selected ? styles.selected.color : styles[props.type].color};
   opacity: ${props => styles[props.type].opacity};
