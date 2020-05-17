@@ -7,6 +7,7 @@ const Wrapper = styled(animated.div)`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  height: -webkit-fill-available;
   font-size: 60px;
 `;
 

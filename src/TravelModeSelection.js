@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: -webkit-fill-available;
   background-color: #fff;
 `;
 
@@ -20,6 +21,7 @@ const CloseButtonWrapper = styled.div`
 const ButtonContainer = styled.div`
   width: 100vw;
   height: 100vh;
+  height: -webkit-fill-available;
   display: flex;
   align-items: center;
   justify-content: center;
