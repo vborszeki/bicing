@@ -17,8 +17,7 @@ const useStations = () => {
         id: station.station_id,
         name: station.name,
         lat: station.lat,
-        lng: station.lon,
-        capacity: station.capacity
+        lng: station.lon
       }));
 
       const stationStatusResponse = await fetch(
@@ -30,6 +29,7 @@ const useStations = () => {
         mechanicalBikes: station.num_bikes_available_types.mechanical,
         ebikes: station.num_bikes_available_types.ebike,
         availableDocks: station.num_docks_available,
+        capacity: station.num_bikes_available + station.num_docks_available,
         status: station.status
       }));
 
