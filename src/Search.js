@@ -22,12 +22,13 @@ const CloseButtonWrapper = styled.div`
 
 const Input = styled.input`
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 22px;
   margin-top: 52px;
   margin-left: 40px;
   outline: none;
   border: none;
   caret-color: #000;
+  padding-left: 0;  
 }
 `;
 
