@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import Station from './Station';
 import Bikes from './Bikes';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Map from '../Map/Map';
 import StationInfo from '../StationInfo';
